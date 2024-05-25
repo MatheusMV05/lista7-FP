@@ -1,10 +1,7 @@
 with open("QP1/qp1.txt", "r") as file:
-    ips = []
-    lines = file.readlines()
-    for i in lines:
-        ips.append(i.strip())
-    for i in range(len(ips)):
-        ip = ips[i].split(".")
+    linha = file.readlines()
+    for i in range(len(linha)):
+        ip = linha[i].split(".")
         ip_valido = True
         for x in ip:
             try:
@@ -16,6 +13,6 @@ with open("QP1/qp1.txt", "r") as file:
                 ip_valido = False
                 break
         if ip_valido:
-            print(ips[i], "ip valido")
+            print(linha[i].strip(), "ip valido")
         else:
-            print(ips[i], "ip invalido")
+            print(linha[i].strip(), "ip invalido")
