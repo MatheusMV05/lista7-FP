@@ -13,8 +13,8 @@ def alterar(arquivo):
 
     for i, linha in enumerate(lines):
         print(linha, end="")
-        alt = input("Deseja modificar(s/n)?").lower()
-        if alt == 's':
+        alt = input("Deseja modificar(sim/nao)?").lower()
+        if alt == 'sim':
             lines[i] = input("Insira o novo nome:") + "\n"
 
     with open(arquivo, 'w') as file:
